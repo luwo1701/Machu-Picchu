@@ -1,0 +1,44 @@
+body{
+	background-image: url("http://www.chickenforum.com/images/4/4/4/amber-white.jpg");
+
+}
+
+.arrow-right {
+  width: 0; 
+  height: 0; 
+  border-top: 60px solid transparent;
+  border-bottom: 60px solid transparent; 
+  border-left: 120px solid black;
+	position: center;
+	display: block;
+	margin: 0 auto;
+	opacity: 0.75;
+}
+
+.arrow-right-clicked{
+
+  width: 0;
+  height: 0;
+  border-top: 60px solid transparent;
+  border-bottom: 60px solid transparent; 
+  border-left: 120px solid white;
+  position: center;
+  display: block;
+  margin: 0 auto;
+  opacity: 0.75;
+
+}
+
+
+.play {
+  display:block;
+  width: 0; 
+	height: 0; 
+	border-top: $size solid transparent;
+	border-bottom: $size solid transparent;
+	border-left: ($size*$ratio) solid $foreground;
+  margin: ($size * 2) auto $size auto;
+  position:relative;
+  z-index:1;
+  left:($size*0.2);
+  }
