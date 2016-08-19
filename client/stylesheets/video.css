@@ -1,44 +1,54 @@
 body{
-	background-image: url("http://www.chickenforum.com/images/4/4/4/amber-white.jpg");
-
+	background-image: url("http://www.travelandleisure.com/sites/default/files/styles/1600x1000/public/1434385487/ATTRACTIONS0615-machu-picchu.jpg?itok=H-P-lyy8");
+	left:50%;
 }
 
-.arrow-right {
+.arrow-right{
   width: 0; 
-  height: 0; 
+  height: 0;
+	top:50%;
+	left:50%; 
   border-top: 60px solid transparent;
   border-bottom: 60px solid transparent; 
-  border-left: 120px solid black;
+  border-left: 120px solid #E4C59F;
+	position: absolute;
+	display: block;
+	margin: 0 auto;
+	opacity: 0.75;
+	text:"Press to Play";
+}
+
+.arrow-right.clicked{
+	position:relative;
+	width: 0;
+	height: 0;
+	border-top: 60px solid transparent;
+	border-bottom: 60px solid transparent; 
+	border-left: 120px solid white;
 	position: center;
 	display: block;
 	margin: 0 auto;
 	opacity: 0.75;
 }
-
-.arrow-right-clicked{
-
-  width: 0;
-  height: 0;
-  border-top: 60px solid transparent;
-  border-bottom: 60px solid transparent; 
-  border-left: 120px solid white;
-  position: center;
-  display: block;
-  margin: 0 auto;
-  opacity: 0.75;
-
+.bookmark{
+	position:relative;
+	bottom:0px;
+	left:-100px;
+	right:0px;
+	top:60px;
+	padding:10px;
+	color:white;
+	width:120px;
+	float:left;
+	font-size:25px;
+	height:25px;
+	width:100px;
+	color:#E4C59F;
 }
-
-
-.play {
-  display:block;
-  width: 0; 
-	height: 0; 
-	border-top: $size solid transparent;
-	border-bottom: $size solid transparent;
-	border-left: ($size*$ratio) solid $foreground;
-  margin: ($size * 2) auto $size auto;
-  position:relative;
-  z-index:1;
-  left:($size*0.2);
-  }
+.bookmarkmenu{
+	position:relative;
+	bottom:25px;
+	left:-30px;	
+	width:25px;
+	height:25px;
+}
