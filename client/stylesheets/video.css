@@ -1,37 +1,34 @@
 body{
+	/* background image is take from offline therefore licensing issues are currently a problem will be switched to shanes image when i figure out how to do so*/
 	background-image: url("http://www.travelandleisure.com/sites/default/files/styles/1600x1000/public/1434385487/ATTRACTIONS0615-machu-picchu.jpg?itok=H-P-lyy8");
-	left:50%;
+	/*background-repeat:no-repeat;*/
+	background-size:100% 100%;
+	cursor:pointer;
 }
 
-.arrow-right{
-  width: 0; 
-  height: 0;
+.arrow-right{ 
+	position: absolute;
 	top:50%;
-	left:50%; 
-  border-top: 60px solid transparent;
+	left:50%;
+  width:0;
+	height:0;
+	border-top: 60px solid transparent;
   border-bottom: 60px solid transparent; 
   border-left: 120px solid #E4C59F;
-	position: absolute;
 	display: block;
 	margin: 0 auto;
 	opacity: 0.75;
-	text:"Press to Play";
+	cursor:pointer;
 }
 
 .arrow-right.clicked{
-	position:relative;
-	width: 0;
-	height: 0;
 	border-top: 60px solid transparent;
 	border-bottom: 60px solid transparent; 
 	border-left: 120px solid white;
-	position: center;
-	display: block;
-	margin: 0 auto;
-	opacity: 0.75;
+	cursor:pointer;
 }
 .bookmark{
-	position:relative;
+	position:absolute;
 	bottom:0px;
 	left:-100px;
 	right:0px;
@@ -44,11 +41,30 @@ body{
 	height:25px;
 	width:100px;
 	color:#E4C59F;
+	font-family: Helvetica, Sans-Serif;
 }
-.bookmarkmenu{
+.bookmarkimg{
 	position:relative;
 	bottom:25px;
 	left:-30px;	
 	width:25px;
 	height:25px;
+}
+
+.bookmarkmenu{
+	background-color:#E4C59F;
+	color:black;
+	display: inline-block;
+	padding:10px 10px 0px 10px;
+	position:relative;
+	top:-40px;
+	left:-20px;
+}
+.bookmarkmenu li{
+	opacity:1;
+	list-style-type:none;
+	margin: 0 0 10px 0;
+	font-family: Helvetica, Sans-Serif;
+	color:black;
+	font-size:18px;
 }
