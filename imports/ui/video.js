@@ -1,33 +1,29 @@
 // JS for main activity here
-import { Template } from 'meteor/templating';
-import { ReactiveDict } from 'meteor/reactive-dict';
-
 import './video.html'
 
-//document.getElementById('PlayButton').addEventListener('click',keyPress);
+$(document).ready(function(){
+	var play = $('#PlayButton');
+	var menu = $('.bookmarkmenu');	
+	menu.hide();	
+	play.click(function(e) {
+			if (e.target.id=="bookmarkimg"){
+				var playPosition=$("#bookmarkimg").offset();
+				var up =  playPosition.top+20;
+				//$(".bookmarkmenu").css({left: playPosition.left + 'px', top:up+'px'})
+				$(".bookmarkmenu").toggle();	
+			}
 
+			if(e.target.id == "PlayButton"){
+				play.toggleClass("clicked");
+			}
+			
 
-function keyPress() {
-    console.log("pressed");
-}
+			if (e.target.id == "bookmarkmenu li"){
 
-Template.body.onCreated(function bodyOnCreated(){
-  this.state = new ReactiveDict();
+				console.log("clicked list");
+			}
+	});
 });
 
-
-Template.body.events ({
-	'click .arrow-right'(event){
-		var current = document.getElementById('PlayButton');
-		if (!current){
-			current.classlist.remove('arrow-right');
-		}
-		event.currentTarget.classList.add('arrow-right-clicked')
-
-console.log("pressed")
-}
-
-
-});
 
 
